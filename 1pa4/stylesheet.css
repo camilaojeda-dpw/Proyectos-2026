@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@property --color1 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #A8B5A2;
+}
+
+@property --color2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #DED2C1;
+}
+
+@property --color3 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #F7F3ED;
+}
+
+@property --color4 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #D8B8B0;
+}
+
+@property --color5 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #6B5B4D;
+}
+
+*{
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    padding: 5px;
+}
+
+header{
+    background-color: var(--color1);
+    color:white;
+    border: dotted 2px var(--color2);
+}
+
+h1 {
+    text-align: center;
+}
+
+h2{
+    color: #6B5B4D;
+}
+
+a{
+    color: var(--color3);
+}
+
+li{
+    list-style-type: none;
+}
+
+button {
+    font-family: inherit;
+    background-color: var(--color2);
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    display: block;
+}
+
+#beneficios li {
+    display: block;
+}
+
+li{
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+}
