@@ -1,0 +1,121 @@
+@property --arena{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #efdfca;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+    background-color: var(--arena);
+    padding: 30px;
+    text-align: center;
+}
+
+.navbar-item {
+    color:rgb(110, 91, 79);
+    text-decoration: none;
+    margin-right: 60px;
+}
+
+.navbar-item:hover {
+    color:rgb(38, 31, 23);
+    font-weight: bold;
+}
+
+header {
+    background-image: url("imagenes/Photos\ |\ Drinks\ photography\ |\ Restaurant\ |\ Paris\ |\ Coffee\ shop\ |\ Cafe\ |\ Latte\ Art.jpg");
+    background-size: cover;
+    background-position: center;
+    color: var(--arena);
+}
+
+h1{
+    color:rgb(149, 98, 80);
+}
+
+header>div {
+    padding: 300px 300px 300px 100px;
+}
+
+.button {
+    padding: 10px;
+    background-color: rgb(185, 185, 135);
+    color: var(--arena);
+    display: inline-block;
+    margin: 15px 0 15px;
+}
+
+.button:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+#section1 {
+    background-color: rgb(215, 232, 197);
+}
+
+#img-matcha {
+    width: 550px;
+}
+
+section, footer {
+        padding: 20px;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 100px;
+    color: rgb(104, 83, 67);
+}
+
+#section1 p{
+    width: 50%;
+}
+
+#sct1-text{
+    padding-left: 70px;
+}
+
+#section2 {
+    text-align: center;
+}
+
+#section2 table{
+    margin: auto;
+    margin-top: 30px;
+    border: 3px solid rgb(156, 176, 212);
+    border-collapse: collapse;
+}
+
+#section2 td,th {
+    padding: 10px;
+}
+
+#section2 th{
+    background-color: rgb(156, 176, 212);
+    color: #ffffff;
+}
+
+#section2 td {
+    border-bottom: 1px solid rgb(156, 176, 212);
+}
+
+footer {
+    background-color: cornflowerblue;
+    color: aliceblue;
+}
+
+footer table{
+    width: 100%;
+}
+
+#contacto {
+    text-align: right;
+}
