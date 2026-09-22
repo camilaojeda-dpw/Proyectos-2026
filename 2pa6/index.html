@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 Ejemplos de Grid</title>
+
+    <style>
+
+        /* ---------- ESTILOS GENERALES ---------- */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            background-color: #f3f1ff;
+            color: #302080;
+        }
+
+        h1 {
+            text-align: center;
+            color: #3f2a9d;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #3f2a9d;
+            margin-bottom: 15px;
+        }
+
+        hr {
+            border: none;
+            height: 3px;
+            background-color: #6c55d9;
+            margin: 45px 0;
+        }
+
+        .grid {
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .caja {
+            background-color: #5942b5;
+            color: white;
+            min-height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 8px;
+            border: 3px solid white;
+        }
+
+
+        /* ---------- 1. NEW SCREEN ---------- */
+
+        .new-screen {
+            display: grid;
+            grid-template-columns: 1fr;
+            min-height: 150px;
+        }
+
+
+        /* ---------- 2. 1 COLUMNA ---------- */
+
+        .one-column {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+
+        /* ---------- 3. 2 COLUMNAS ---------- */
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+
+        /* ---------- 4. 3 COLUMNAS ---------- */
+
+        .three-columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+
+        /* ---------- 5. 4 COLUMNAS ---------- */
+
+        .four-columns {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+
+        /* ---------- 6. 2 FILAS ---------- */
+
+        .two-rows {
+            display: grid;
+            grid-template-rows: repeat(2, 100px);
+            gap: 10px;
+        }
+
+
+        /* ---------- 7. 3 FILAS ---------- */
+
+        .three-rows {
+            display: grid;
+            grid-template-rows: repeat(3, 80px);
+            gap: 10px;
+        }
+
+
+        /* ---------- 8. 4 FILAS ---------- */
+
+        .four-rows {
+            display: grid;
+            grid-template-rows: repeat(4, 70px);
+            gap: 10px;
+        }
+
+
+        /* ---------- 9. 5 FILAS ---------- */
+
+        .five-rows {
+            display: grid;
+            grid-template-rows: repeat(5, 60px);
+            gap: 8px;
+        }
+
+
+        /* ---------- 10. 6 FILAS ---------- */
+
+        .six-rows {
+            display: grid;
+            grid-template-rows: repeat(6, 55px);
+            gap: 7px;
+        }
+
+
+        /* ---------- 11. LARGE GRID ---------- */
+
+        .large-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 90px);
+            gap: 10px;
+        }
+
+
+        /* ---------- 12. SMALL GRID ---------- */
+
+        .small-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 55px);
+            gap: 6px;
+        }
+
+
+        /* ---------- 13. MOSAIC 1 ---------- */
+
+        .mosaic1 {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 2fr 1fr;
+            gap: 10px;
+        }
+
+
+        /* ---------- 14. MOSAIC 2 ---------- */
+
+        .mosaic2 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 2fr 1fr;
+            gap: 10px;
+        }
+
+        .mosaic2 .grande {
+            grid-row: 1 / 2;
+            grid-column: 1 / 3;
+        }
+
+
+        /* ---------- 15. MOSAIC 3 ---------- */
+
+        .mosaic3 {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 3fr 1fr;
+            gap: 10px;
+        }
+
+        .mosaic3-bottom {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+
+
+        /* ---------- 16. MOSAIC 4 ---------- */
+
+        .mosaic4 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+
+        .mosaic4 .centro {
+            grid-column: 1 / 3;
+        }
+
+
+        /* ---------- 17. MOSAIC 5 ---------- */
+
+        .mosaic5 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .mosaic5 .arriba {
+            grid-column: 1 / 3;
+        }
+
+        .mosaic5 .medio {
+            grid-column: 1 / 3;
+        }
+
+        .mosaic5 .abajo {
+            grid-column: 1 / 2;
+        }
+
+
+        /* ---------- 18. MOSAIC 6 ---------- */
+
+        .mosaic6 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3, 90px);
+            gap: 10px;
+        }
+
+        .mosaic6 .vertical {
+            grid-row: 1 / 3;
+        }
+
+
+        /* ---------- 19. MOSAIC 7 ---------- */
+
+        .mosaic7 {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: repeat(3, 80px);
+            gap: 10px;
+        }
+
+        .mosaic7 .grande {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+
+
+        /* ---------- 20. MOSAIC 8 ---------- */
+
+        .mosaic8 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 70px);
+            gap: 7px;
+        }
+
+        .mosaic8 .uno {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+        }
+
+        .mosaic8 .dos {
+            grid-column: 3 / 5;
+            grid-row: 1 / 3;
+        }
+
+        .mosaic8 .tres {
+            grid-column: 1 / 2;
+            grid-row: 2 / 4;
+        }
+
+        .mosaic8 .cuatro {
+            grid-column: 2 / 4;
+            grid-row: 3 / 5;
+        }
+
+        .mosaic8 .cinco {
+            grid-column: 4 / 5;
+            grid-row: 3 / 5;
+        }
+
+
+        /* ---------- COLORES ---------- */
+
+        .color1 { background-color: #5942b5; }
+        .color2 { background-color: #6b50c9; }
+        .color3 { background-color: #7c61d9; }
+        .color4 { background-color: #8d72e8; }
+        .color5 { background-color: #4b369b; }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>20 Ejemplos de CSS Grid</h1>
+
+
+    <!-- 1. NEW SCREEN -->
+    <section class="grid">
+        <h2>1. New Screen</h2>
+
+        <div class="new-screen">
+            <div class="caja color1">A</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 2. 1 COLUMNA -->
+    <section class="grid">
+        <h2>2. 1 Columna</h2>
+
+        <div class="one-column">
+            <div class="caja color1">A</div>
+            <div class="caja color2">B</div>
+            <div class="caja color3">C</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 3. 2 COLUMNAS -->
+    <section class="grid">
+        <h2>3. 2 Columnas</h2>
+
+        <div class="two-columns">
+            <div class="caja color1">A</div>
+            <div class="caja color2">B</div>
+            <div class="caja color3">C</div>
+            <div class="caja color4">D</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 4. 3 COLUMNAS -->
+    <section class="grid">
+        <h2>4. 3 Columnas</h2>
+
+        <div class="three-columns">
+            <div class="caja color1">A</div>
+            <div class="caja color2">B</div>
+            <div class="caja color3">C</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 5. 4 COLUMNAS -->
+    <section class="grid">
+        <h2>5. 4 Columnas</h2>
+
+        <div class="four-columns">
+            <div class="caja color1">A</div>
+            <div class="caja color2">B</div>
+            <div class="caja color3">C</div>
+            <div class="caja color4">D</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 6. 2 FILAS -->
+    <section class="grid">
+        <h2>6. 2 Filas</h2>
+
+        <div class="two-rows">
+            <div class="caja color1">A</div>
+            <div class="caja color2">B</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 7. 3 FILAS -->
+    <section class="grid">
+        <h2>7. 3 Filas</h2>
+
+        <div class="three-rows">
+            <div class="caja color1">A</div>
+            <div class="caja color2">B</div>
+            <div class="caja color3">C</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 8. 4 FILAS -->
+    <section class="grid">
+        <h2>8. 4 Filas</h2>
+
+        <div class="four-rows">
+            <div class="caja color1">A</div>
+            <div class="caja color2">B</div>
+            <div class="caja color3">C</div>
+            <div class="caja color4">D</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 9. 5 FILAS -->
+    <section class="grid">
+        <h2>9. 5 Filas</h2>
+
+        <div class="five-rows">
+            <div class="caja color1">A</div>
+            <div class="caja color2">B</div>
+            <div class="caja color3">C</div>
+            <div class="caja color4">D</div>
+            <div class="caja color5">E</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 10. 6 FILAS -->
+    <section class="grid">
+        <h2>10. 6 Filas</h2>
+
+        <div class="six-rows">
+            <div class="caja color1">A</div>
+            <div class="caja color2">B</div>
+            <div class="caja color3">C</div>
+            <div class="caja color4">D</div>
+            <div class="caja color5">E</div>
+            <div class="caja color1">F</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 11. LARGE GRID -->
+    <section class="grid">
+        <h2>11. Large Grid</h2>
+
+        <div class="large-grid">
+            <div class="caja color1">A</div>
+            <div class="caja color2">B</div>
+            <div class="caja color3">C</div>
+            <div class="caja color4">D</div>
+            <div class="caja color5">E</div>
+            <div class="caja color1">F</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 12. SMALL GRID -->
+    <section class="grid">
+        <h2>12. Small Grid</h2>
+
+        <div class="small-grid">
+            <div class="caja color1">1</div>
+            <div class="caja color2">2</div>
+            <div class="caja color3">3</div>
+            <div class="caja color4">4</div>
+            <div class="caja color5">5</div>
+
+            <div class="caja color2">6</div>
+            <div class="caja color3">7</div>
+            <div class="caja color4">8</div>
+            <div class="caja color5">9</div>
+            <div class="caja color1">10</div>
+
+            <div class="caja color3">11</div>
+            <div class="caja color4">12</div>
+            <div class="caja color5">13</div>
+            <div class="caja color1">14</div>
+            <div class="caja color2">15</div>
+
+            <div class="caja color4">16</div>
+            <div class="caja color5">17</div>
+            <div class="caja color1">18</div>
+            <div class="caja color2">19</div>
+            <div class="caja color3">20</div>
+
+            <div class="caja color5">21</div>
+            <div class="caja color1">22</div>
+            <div class="caja color2">23</div>
+            <div class="caja color3">24</div>
+            <div class="caja color4">25</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 13. MOSAIC 1 -->
+    <section class="grid">
+        <h2>13. Mosaic 1</h2>
+
+        <div class="mosaic1">
+            <div class="caja color1">A</div>
+            <div class="caja color3">B</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 14. MOSAIC 2 -->
+    <section class="grid">
+        <h2>14. Mosaic 2</h2>
+
+        <div class="mosaic2">
+            <div class="caja color1 grande">A</div>
+            <div class="caja color2">B</div>
+            <div class="caja color3">C</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 15. MOSAIC 3 -->
+    <section class="grid">
+        <h2>15. Mosaic 3</h2>
+
+        <div class="mosaic3">
+            <div class="caja color1">A</div>
+
+            <div class="mosaic3-bottom">
+                <div class="caja color2">B</div>
+                <div class="caja color3">C</div>
+                <div class="caja color4">D</div>
+                <div class="caja color5">E</div>
+            </div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 16. MOSAIC 4 -->
+    <section class="grid">
+        <h2>16. Mosaic 4</h2>
+
+        <div class="mosaic4">
+            <div class="caja color1">A</div>
+            <div class="caja color2">B</div>
+
+            <div class="caja color3 centro">C</div>
+
+            <div class="caja color4">D</div>
+            <div class="caja color5">E</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 17. MOSAIC 5 -->
+    <section class="grid">
+        <h2>17. Mosaic 5</h2>
+
+        <div class="mosaic5">
+            <div class="caja color1 arriba">A</div>
+
+            <div class="caja color2 medio">B</div>
+
+            <div class="caja color3 abajo">C</div>
+            <div class="caja color4">D</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 18. MOSAIC 6 -->
+    <section class="grid">
+        <h2>18. Mosaic 6</h2>
+
+        <div class="mosaic6">
+            <div class="caja color1 vertical">A</div>
+            <div class="caja color2">B</div>
+            <div class="caja color3">C</div>
+            <div class="caja color4">D</div>
+            <div class="caja color5">E</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 19. MOSAIC 7 -->
+    <section class="grid">
+        <h2>19. Mosaic 7</h2>
+
+        <div class="mosaic7">
+            <div class="caja color1 grande">A</div>
+            <div class="caja color2">B</div>
+            <div class="caja color3">C</div>
+            <div class="caja color4">D</div>
+            <div class="caja color5">E</div>
+        </div>
+    </section>
+
+
+    <hr>
+
+
+    <!-- 20. MOSAIC 8 -->
+    <section class="grid">
+        <h2>20. Mosaic 8</h2>
+
+        <div class="mosaic8">
+            <div class="caja color1 uno">A</div>
+            <div class="caja color2 dos">B</div>
+            <div class="caja color3 tres">C</div>
+            <div class="caja color4 cuatro">D</div>
+            <div class="caja color5 cinco">E</div>
+        </div>
+    </section>
+
+
+</body>
+</html>
