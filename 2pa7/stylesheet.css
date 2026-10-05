@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+}
+
+.fila {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12,1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+[class^="col-"]{
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.col-1{
+    background-color: rgb(221, 211, 200);
+    grid-column: span 1;
+}
+
+.col-2{
+    background-color: azure;
+    grid-column: span 2;
+}
+
+.col-3{
+    background-color: cornflowerblue;
+    grid-column: span 3;
+}
+
+.col-4{
+    background-color: rgb(213, 228, 186);
+    grid-column: span 4;
+}
+
+.col-5{
+    background-color: rgb(158, 201, 158);
+    grid-column: span 5;
+}
+
+.col-6{
+    background-color: khaki;
+    grid-column: span 6;
+}
+
+.col-7{
+    background-color: rgb(190, 188, 163);
+    grid-column: span 7;
+}
+
+.col-8{
+    background-color: rgb(183, 197, 159);
+    grid-column: span 8;
+}
+
+.col-9{
+    background-color: rgb(240, 215, 240);
+    grid-column: span 9;
+}
+
+.col-10{
+    background-color: rgb(195, 226, 236);
+    grid-column: span 10;
+}
+
+.col-11{
+    background-color: rgb(233, 187, 187);
+    grid-column: span 11;
+}
+
+.col-12{
+    background-color: rgb(240, 214, 166);
+    grid-column: span 12;
+}
