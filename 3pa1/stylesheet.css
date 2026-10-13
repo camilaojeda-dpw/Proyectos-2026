@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 10px;
+}
+
+[class^="col-"] {
+    grid-column: span 12;
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.col-3 {
+    background-color: rgb(232, 229, 250);
+}
+
+.col-4 {
+    background-color: rgb(219, 215, 249);
+}
+
+.col-6 {
+    background-color: rgb(208, 204, 247);
+}
+
+.col-12 {
+    background-color: rgb(203, 197, 249);
+}
+
+/*Breakibgpoint de tablet*/
+@media screen and  (min-width:768px) {
+    .col-4 {
+        grid-column: span 4;
+    }
+
+    .col-6 {
+        grid-column: span 6;
+    }
+}
+
+/*Breakibgpoint de Escritorio*/
+@media screen and (min-width:992px) {
+    .col-4 {
+        grid-column: span 4;
+    }
+
+    .col-6 {
+        grid-column: span 6;
+    }
+
+    .col-3 {
+        grid-column: span 3;
+    }
+}
